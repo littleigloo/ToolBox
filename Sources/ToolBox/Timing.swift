@@ -9,7 +9,7 @@ import Foundation
 
 // ...........
 
-func delay(for timeInterval: TimeInterval, closureToExecute: @escaping () -> ()) {
+public func delay(for timeInterval: TimeInterval, closureToExecute: @escaping () -> ()) {
     
     let when = DispatchTime.now() + timeInterval
     DispatchQueue.main.asyncAfter(deadline: when) {
