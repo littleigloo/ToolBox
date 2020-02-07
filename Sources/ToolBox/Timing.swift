@@ -1,8 +1,9 @@
 //
-//  File.swift
-//  
+//  Timing.swift
+//  ToolBox
 //
-//  Created by Vitalis on 17/1/20.
+//  Created by Vitalis on 17/01/2020.
+//  Copyright © 2019 Neiron Digital. All rights reserved.
 //
 
 import Foundation
