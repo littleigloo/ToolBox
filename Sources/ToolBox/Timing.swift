@@ -10,10 +10,16 @@ import Foundation
 
 // ...........
 
-public func delay(for timeInterval: TimeInterval, closureToExecute: @escaping () -> ()) {
+public extension ToolBox {
     
-    let when = DispatchTime.now() + timeInterval
-    DispatchQueue.main.asyncAfter(deadline: when) {
-        closureToExecute()
+    //  MARK: - METHODS 🌐 PUBLIC
+    // ///////////////////////////////////////////
+    
+    static func delay(for timeInterval: TimeInterval, closureToExecute: @escaping () -> ()) {
+        
+        let when = DispatchTime.now() + timeInterval
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            closureToExecute()
+        }
     }
 }

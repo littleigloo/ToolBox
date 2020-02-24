@@ -9,12 +9,11 @@
 import UIKit
 
 // ...........
-
-public struct Closure {
-    
-    public typealias Void           = () -> ()
-    public typealias AlertAction    = (UIAlertAction) -> ()
-    public typealias Controller     = (UIViewController) -> ()
+public extension ToolBox {
+    struct Closure {
+        
+        public typealias Void           = () -> ()
+        public typealias AlertAction    = (UIAlertAction) -> ()
+        public typealias Controller     = (UIViewController) -> ()
+    }
 }
-
-
