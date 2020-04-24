@@ -102,21 +102,4 @@ public extension String {
         }
         return result
     }
-    
-    // ...........
-    
-    // Returns a URL from string if conversion is possible or nil
-    var asURL: URL? {
-        
-        guard !self.isEmpty else {
-            return nil
-        }
-        
-        guard let url = URL(stringToEncode: self) else {
-            print("COULD NOT CREATE URL")
-            return nil
-        }
-        
-        return url
-    }
 }

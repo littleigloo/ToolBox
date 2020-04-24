@@ -14,7 +14,7 @@ public extension ToolBox {
     //                                      MARK: - TYPES
     //..............................................................................................
     
-    struct TAlias {
+    struct Alias {
         public typealias LaunchOptions = [UIApplication.LaunchOptionsKey: Any]
     }
     
