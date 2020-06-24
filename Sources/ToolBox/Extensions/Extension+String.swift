@@ -7,11 +7,9 @@
 //
 
 import Foundation
-
 // ...........
 
 public extension String {
-    
     // ...........
     
     enum AdditionalSpacesPosition {
@@ -101,5 +99,14 @@ public extension String {
             }
         }
         return result
+    }
+    // ...........
+    
+    // Check substring existance
+    func isContaining(substring: String) -> Bool {
+        guard let _ = self.lowercased().range(of: substring) else {
+            return false
+        }
+        return true
     }
 }

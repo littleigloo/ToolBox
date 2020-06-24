@@ -7,22 +7,18 @@
 //
 
 import UIKit
-
 // ...........
+
 public extension ToolBox {
-    
     //                                      MARK: - TYPES
     //..............................................................................................
-    
     struct Alias {
         public typealias LaunchOptions = [UIApplication.LaunchOptionsKey: Any]
     }
     
     //                                      MARK: - CLOSURES
     //..............................................................................................
-    
     struct Closure {
-        
         public typealias Void           = () -> ()
         public typealias AlertAction    = (UIAlertAction) -> ()
         public typealias Controller     = (UIViewController) -> ()
