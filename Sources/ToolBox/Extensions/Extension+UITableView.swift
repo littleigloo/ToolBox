@@ -13,6 +13,7 @@ public extension UITableView {
     // Reload tableView with visible cells animation
     func reloadWithAnimation() {
         self.reloadData()
+        self.layoutIfNeeded()
         let cells = self.visibleCells
         let tableHeight = self.bounds.size.height
         for cell in cells {

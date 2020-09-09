@@ -20,7 +20,6 @@ precedencegroup Assign {
 // Assign right to left only if right is not nil
 infix operator <<< : Assign
 public func <<<<T>(left: inout T?, right: T?) {
-
     guard let right = right else {
         return
     }
@@ -28,10 +27,18 @@ public func <<<<T>(left: inout T?, right: T?) {
 }
 
 // ...........
+// Assign right to left only if left is nil
+infix operator <?? : Assign
+public func <??<T>(left: inout T?, right: T) {
+    if left == nil {
+        left = right
+    }
+}
 
+// ...........
+// If left part is nil then execute the closure
 infix operator ?-> : TernaryPrecedence
 public func ?-><R>(left: R?, right: @autoclosure () -> ()) -> R? {
-    
     guard let _ = left else {
         right()
         return left
