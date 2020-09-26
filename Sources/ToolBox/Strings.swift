@@ -60,7 +60,7 @@ public func stringWithAddedSpacesToMatchLenghtOf(_ stringLength: Int, forString 
 // Print a chosen string for a nil object or an empty string. [WARNING!]: Unknown behavior for complex class instances, use for simple types only.
 public func getString<T>(forOptionalValue value: T?, substitute: String? = nil) -> String {
     let emptyString = substitute ?? "◯"
-    guard let value = value, let convertableValue = value as? LosslessStringConvertible else {
+    guard let value = value, let convertableValue = value as? CustomStringConvertible else {
         return emptyString
     }
     let valueString = "\(convertableValue)"
