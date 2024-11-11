@@ -18,7 +18,7 @@ public func isValidEmail(_ email: String) -> Bool {
 
 // Check if password is valid. Uses REGEX
 public func isValidPassword(_ email: String) -> Bool {
-    let passwordRegEx = "(?!.*[\\s]+)(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[\\W\\_])[A-Za-z\\d\\W\\_]{8,}$"
+    let passwordRegEx = "(?!.*[\\s]+)(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[\\W\\_])[A-Za-z\\d\\W\\_]{10,}$"
     let passwordTest = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
     return passwordTest.evaluate(with: email)
 }
